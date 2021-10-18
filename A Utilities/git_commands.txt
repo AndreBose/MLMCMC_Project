@@ -1,0 +1,39 @@
+################
+#              #  
+# git Commands #
+#              #
+################
+
+
+
+# %% Create a local clone of the repository
+
+git clone https://github.com/AndreBose/MLMCMC_Project.git # clone the repository in the current folder
+
+
+
+# %% Update the local  repository (do this before any operation on the local folder)
+
+cd MLMCMC_Project       # go to the folder of the repository
+
+git pull                # sync the local folder with the new files in the remote folder
+
+
+
+# %% Update the remote repository (do this after  any operation on the local folder)
+
+cd MLMCMC_Project       # go to the folder of the repository
+
+git add .               # keep track of the updates in the local folder
+
+git commit -m 'message' # officialise the updates in the local folder (write as message the reasons of the update)
+
+git push                # sync the remote folder with the new files in the local folder
+
+
+
+# %% Other utilities
+
+git status              # inspect the updates in the local folder
+
+git log                 # check update logs of the repository

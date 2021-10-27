@@ -4,6 +4,15 @@
 #                  #
 ####################
 
+##############################
+#   PDE definition       
+
+#  - delta(u) = f  in Omega
+#           u = g  in d_Omega
+# domain: Omega = [0,1]^2
+
+##############################
+
 
 # Settings
 
@@ -23,13 +32,13 @@ plt.figure(figsize=(8, 8), dpi=1200)
 
 # Create mesh and define function space
 
-mesh = UnitSquareMesh(n_segments_h, n_segments_v)
-V = FunctionSpace(mesh, 'P', 1)
+mesh = UnitSquareMesh(n_segments_h, n_segments_v)   # create a 2D square mesh in [0,1]^2
+V = FunctionSpace(mesh, 'P', 1)                     # create a Galerkin functional space with elements of degree 1
 
 
-# Define boundary condition
+# Define Dirichlet boundary condition
 
-u_D = Expression('1 + x[0]*x[0] + 2*x[1]*x[1]', degree=2)
+u_D = Expression('1 + x[0]*x[0] + 2*x[1]*x[1]', degree=2)   #it is an user defined mathematical expression to describe the function over the BC
 
 def boundary(x, on_boundary):
     return on_boundary
@@ -37,20 +46,20 @@ def boundary(x, on_boundary):
 bc = DirichletBC(V, u_D, boundary)
 
 
-# Define variational problem
+# Define variational problem: find u in V st a(u,v) = F(v) for all v in V
 
-u = TrialFunction(V)
-v = TestFunction(V)
-f = Constant(-6.0)
+u = TrialFunction(V)    # set it as the unknown function
+v = TestFunction(V)     # set it as test function
+f = Constant(-6.0)      # set it as the force function
 
-a = dot(grad(u), grad(v))*dx
-L = f*v*dx
-
+a = dot(grad(u), grad(v))*dx    # it represents a(u,v) = integral( grad(u)' grad(v) dx )
+F = f*v*dx                      # it represents F(v) = integral( f(x) * v(x) * dx )
+# dx is a special character to say it integrates
 
 # Compute solution
 
 u = Function(V)
-solve(a == L, u, bc)
+solve(a == F, u, bc)            # solve variational problem a(u,v) = f(v) with u as unknown and given BC
 
 
 # Plot solution and mesh
@@ -90,3 +99,4 @@ plt.scatter(x = vertex_positions[:,0],
             c = vertex_values)
 plt.colorbar()
 plt.show()
+

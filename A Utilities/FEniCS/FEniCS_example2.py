@@ -4,6 +4,14 @@
 #                               #
 #################################
 
+#################################
+# PDE definition
+
+# - mu * delta(u) + b dot grad(u) = f  in Omega
+#                               u = 0  in d_Omega
+# domain: Omega = [0,1]^2
+#################################
+
 
 # Relevant libraries
 
@@ -33,7 +41,7 @@ mesh = UnitSquareMesh(n_segments_h, n_segments_v)
 V = FunctionSpace(mesh, 'P', 1)
 
 
-# Define boundary condition
+# Define Dirichlet boundary condition
 
 u_D = Expression('0', degree=1)     # Homogeneous (null) boundary conditions
 
@@ -43,17 +51,19 @@ def boundary(x, on_boundary):
 bc = DirichletBC(V, u_D, boundary)
 
 
-# Define variational problem
+# Define variational problem: find u in V st a(u,v) = L(v) for all v in V
 
-u = TrialFunction(V)
-v = TestFunction(V)
+u = TrialFunction(V)    # unknown function
+v = TestFunction(V)     # test function
 
+# forcing function
 f = Expression('10*exp(-100*pow( pow(x[0]-x_00, 2) + pow(x[1]-x_01, 2), 0.5))', 
-               degree=1, x_00 = x_0[0], x_01 = x_0[1])
+               degree=1, x_00 = x_0[0], x_01 = x_0[1])    #x_00 and x_01 are the two param values used in the expression
 
-
+# advection term
 b = Constant((np.cos(theta), np.sin(theta)))
-a = mu * dot(grad(u), grad(v)) * dx + 10 * dot(b,grad(u)) * v * dx
+
+a = mu * dot(grad(u), grad(v)) * dx + 10 * dot(b, grad(u)) * v * dx
 L = f*v*dx
 
 

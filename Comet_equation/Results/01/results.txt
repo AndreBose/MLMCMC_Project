@@ -1,0 +1,18 @@
+# prova 01 results
+
+# objectives
+mu_real = 2
+theta_real = 3.14
+
+	mean	    sd	hdi_3%	hdi_97%	mcse_mean	mcse_sd	ess_bulk	ess_tail	r_hat
+mu_random	    2.593	1.438	0.279	4.839	0.059	0.042	540.0	504.0	1.00
+theta_random	3.091	1.771	0.221	6.027	0.076	0.054	544.0	717.0	1.01
+
+Acceptance rate: 0.895
+Runtime: 6381.4442093372345 seconds
+ESS list: [540.0457998  543.63343012]
+Normalised ESS list: [0.5400458  0.54363343]
+ESS/sec: [0.08462752 0.08518972]
+
+
+

@@ -1,54 +1,27 @@
-# System
+## Prova 03 settings
 
-stochastic  = False       # random seeds for the experiments
+# objectives
+mu_real = 2
+theta_real = 3.14
 
-RANDOM_SEED = 123446      # Sampling seed
-NUMPY_SEED  = 123         # Numpy    seed
+# models
+coarse: [12,12]
+fine: [32,32]
+noise level = 0.000001
 
-# True model
+#priors
+mu: unif(0.1,5)
+theta: unif(0,2pi)
+[mu0, theta0] = [0.5, 2]
 
-mu    = 2                 # diffusion parameter
-theta = np.pi             # advection angle parameter
-n_params = 2
-
-x_0 = np.array([0.5,0.5]) # center of the bump source-force
-
-n_data_h = 32             # number of segments on the horizontal axis
-n_data_v = 32             # number of segments on the vertical   axis
-
-noise_level = 0.000001    # noise level in the output data
-
-
-# Different mesh refinements for the models
-
-                             #  h  v
-n_data_h_v_models = np.array([[ 12, 12],   # coarse model
-                              [32,32]])  # fine   model
-
-# MCMC Settings
-
-ndraws  = 500            # number of draws from the distribution
-nburn   = 500            # number of burn-in samples
-
-nchains = 2               # number of independent chains
-nsub    = 5               # subsampling rate for MLDA
-
-# MLDA and Metropolis tuning parameters
-
-tune           = True
-tune_interval  = 100      # set high to prevent tuning
-discard_tuning = True
-
-# Set prior parameters for random parameters (mu and theta)
-
-lower_mu    = 0.1       # lower bound for mu (supposing mu ~ Uniform)
-upper_mu    = 5         # upper bound for mu
-lower_theta = 0         # lower bound for theta (supposing theta ~ Uniform)
-upper_theta = 2*np.pi   # upper bound for theta
-
-mu_0        = 0.5       # initial guess for mu    random parameter
-theta_0     = 2         # initial guess for theta random parameter
-
-# Set the sigma for inference (TODO)
-
+#likelihood
 sigma = 1
+
+#MCMC setting
+ndraws = 500
+nburn = 500
+nchains = 2
+nsub = 5
+tune_interval = 100
+cores = 1
+

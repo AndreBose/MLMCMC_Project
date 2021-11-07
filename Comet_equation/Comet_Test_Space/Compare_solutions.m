@@ -6,7 +6,7 @@ clc
 mu    = 1;
 theta = 1;
 
-nref  = 6;
+nref  = 2;
 
 [errors,solutions,femregion,Dati] = C_main2D('Test1', nref, mu, theta);
 

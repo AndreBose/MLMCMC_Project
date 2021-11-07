@@ -19,7 +19,7 @@ import pandas            as pd
 mu    = 1                 # diffusion parameter
 theta = 1                 # advection angle parameter
 
-n_segments_h = 64         # number of segments on the horizontal axis
+n_segments_h = 64        # number of segments on the horizontal axis
 n_segments_v = 64         # number of segments on the vertical   axis
 
 x_0 = np.array([0.5,0.5]) # center of the bump source-force
@@ -50,7 +50,6 @@ v = TestFunction (V)
 
 f = Expression('10*exp(-25*pow( pow(x[0]-x_00, 2) + pow(x[1]-x_01, 2), 0.5))', 
                degree=2, x_00 = x_0[0], x_01 = x_0[1])
-
 
 b = Constant((np.cos(theta), np.sin(theta)))
 a = mu * dot(grad(u), grad(v)) * dx + 10 * dot(b,grad(u)) * v * dx

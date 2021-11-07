@@ -1,0 +1,18 @@
+# prova 06 results
+
+# objectives
+mu:  2
+theta : 3.141592653589793
+
+				mean	sd	hdi_3%	hdi_97%	mcse_mean	mcse_sd	ess_bulk	ess_tail	r_hat
+mu_random		2.016	0.111	1.859	2.221	0.027	0.020	19.0	34.0	NaN
+theta_random	3.335	0.130	3.071	3.548	0.021	0.015	37.0	22.0	NaN
+
+MLDA Sampler:
+
+Acceptance rate: 0.062
+Runtime: 10495.968216896057 seconds
+ESS list: [19.222125   37.08021958]
+Normalised ESS list: [0.01922212 0.03708022]
+ESS/sec: [0.00183138 0.00353281]
+

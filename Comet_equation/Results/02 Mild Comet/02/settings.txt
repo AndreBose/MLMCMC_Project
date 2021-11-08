@@ -1,0 +1,35 @@
+# prova 02 settings
+
+# objectives
+mu_real = 2
+theta_real = 3.14
+
+# models
+exact:  [64,64]
+coarse: [8,8]
+fine:   [16,16]
+noise_level = 0.001
+
+# priors
+mu: Unif(0.5, 5)
+theta: Unif(0, 2pi)
+[mu0, theta0] = [3.5, 2]
+
+# likelihood
+sigma_coarse = 0.01
+sigma_fine = 0.001
+
+# MCMC settings
+ndraws  = 1500          
+nburn   = 500        
+nchains = 1          
+nsub    = 5
+tune_interval  = 100
+cores=1
+
+# subgrid for available data
+n_h_points = 5     
+n_v_points = 5 
+
+
+

@@ -4,8 +4,8 @@
 mu:  2
 theta : 3.141592653589793
 
-				mean	sd	hdi_3%	hdi_97%	mcse_mean	mcse_sd	ess_bulk	ess_tail	r_hat
-mu_random		2.016	0.111	1.859	2.221	0.027	0.020	19.0	34.0	NaN
+		mean	sd	hdi_3%	hdi_97%	mcse_mean	mcse_sd	ess_bulk	ess_tail	r_hat
+mu_random	2.016	0.111	1.859	2.221	0.027	0.020	19.0	34.0	NaN
 theta_random	3.335	0.130	3.071	3.548	0.021	0.015	37.0	22.0	NaN
 
 MLDA Sampler:

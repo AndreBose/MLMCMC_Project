@@ -4,11 +4,11 @@
 mu:  2
 theta : 3.141592653589793
 
-				mean	sd	hdi_3%	hdi_97%	mcse_mean	mcse_sd	ess_bulk	ess_tail	r_hat
-mu_random		2.026	0.095	1.859	2.211	0.008	0.006	137.0	163.0	NaN
+		mean	sd	hdi_3%	hdi_97%	mcse_mean	mcse_sd	ess_bulk	ess_tail	r_hat
+mu_random	2.026	0.095	1.859	2.211	0.008	0.006	137.0	163.0	NaN
 theta_random	3.257	0.138	2.984	3.505	0.011	0.008	152.0	86.0	NaN
 
-MLDA Sampler:
+Metropolis Sampler:
 
 Acceptance rate: 0.2245
 Runtime: 2932.3620126247406 seconds

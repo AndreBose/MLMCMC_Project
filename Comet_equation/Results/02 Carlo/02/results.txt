@@ -1,0 +1,16 @@
+
+# objectives
+mu:  2
+theta : 3.141592653589793
+
+		mean	sd	hdi_3%	hdi_97%	mcse_mean	mcse_sd	ess_bulk	ess_tail	r_hat
+mu_random	1.874	0.092	1.718	2.065	0.009	0.006	107.0	129.0	NaN
+theta_random	2.853	0.115	2.625	3.042	0.010	0.007	125.0	160.0	NaN
+
+MLDA without VR Sampler:
+
+Acceptance rate:     0.872
+Runtime:             3136.087928056717 seconds
+ESS list:            [107.29628336 125.21225994]
+Normalised ESS list: [0.42918513 0.50084904]
+ESS/sec:             [0.03421342 0.03992626]

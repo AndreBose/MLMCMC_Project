@@ -1,5 +1,8 @@
 # prova 02 settings
 
+# forzante
+25
+
 # objectives
 mu_real = 2
 theta_real = 3.14

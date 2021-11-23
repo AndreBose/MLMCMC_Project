@@ -1,0 +1,18 @@
+#prova 04
+
+MLDA without VR Sampler:
+
+mu:     2
+theta:  3.141592653589793
+
+		mean	sd	hdi_3%	hdi_97%	mcse_mean	mcse_sd	ess_bulk	ess_tail	r_hat
+mu_random	2.094	0.347	1.513	2.704	0.020		0.015	310.0		354.0		NaN
+theta_random	2.893	0.485	1.721	3.638	0.026		0.018	362.0		405.0		NaN
+
+MLDA without VR Sampler:
+
+Acceptance rate:     0.625
+Runtime:             4758.779434204102 seconds
+ESS list:            [310.03060077 361.67978838]
+Normalised ESS list: [0.38753825 0.45209974]
+ESS/sec:             [0.06514918 0.07600264]

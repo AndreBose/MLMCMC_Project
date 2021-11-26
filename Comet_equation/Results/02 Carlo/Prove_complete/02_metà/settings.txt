@@ -25,8 +25,8 @@ sigma_coarse = 0.001
 sigma_fine = 0.00075
 
 # MCMC settings
-ndraws  = 1000       
-nburn   = 1000        
+ndraws  = 500       
+nburn   = 500        
 nchains = 1          
 nsub    = 2
 tune_interval  = 100

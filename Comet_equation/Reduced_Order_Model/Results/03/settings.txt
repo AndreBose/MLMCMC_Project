@@ -1,0 +1,9 @@
+n_epoch = 50
+
+optimizer = Adam, lr=1e-3
+
+model: dense(50) -> dense(50) -> dense(50)
+
+batch_size = 8
+
+training_time = 4608 seconds

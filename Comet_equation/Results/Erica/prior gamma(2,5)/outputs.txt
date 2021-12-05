@@ -1,0 +1,38 @@
+Metropolis Sampler:
+
+mu:     2
+theta:  3.141592653589793
+/usr/local/lib/python3.7/dist-packages/arviz/data/base.py:221: UserWarning: More chains (1000) than draws (2). Passed array should have shape (chains, draws, *shape)
+  UserWarning,
+arviz - WARNING - Shape validation failed: input_shape: (1, 1000), minimum_shape: (chains=2, draws=4)
+mean	sd	hdi_3%	hdi_97%	mcse_mean	mcse_sd	ess_bulk	ess_tail	r_hat
+mu_random	1.725	0.295	1.245	2.292	0.024	0.017	171.0	97.0	NaN
+theta_random	3.302	1.109	1.581	6.269	0.099	0.078	151.0	83.0	NaN
+/usr/local/lib/python3.7/dist-packages/arviz/data/base.py:221: UserWarning: More chains (1000) than draws (2). Passed array should have shape (chains, draws, *shape)
+  UserWarning,
+arviz - WARNING - Shape validation failed: input_shape: (1, 1000), minimum_shape: (chains=2, draws=4)
+
+Metropolis Sampler:
+Acceptance rate:     0.3615
+Runtime:             3119.8891797065735 seconds
+ESS list:            [171.40936716 150.95012243]
+Normalised ESS list: [0.17140937 0.15095012]
+ESS/sec:             [0.05494085 0.04838317]
+
+
+
+
+MLDA without VR Sampler:
+
+mu:     2
+theta:  3.141592653589793
+mean	sd	hdi_3%	hdi_97%	mcse_mean	mcse_sd	ess_bulk	ess_tail	r_hat
+mu_random	1.706	0.288	1.127	2.194	0.013	0.009	465.0	560.0	NaN
+theta_random	3.222	1.053	0.847	5.204	0.046	0.033	541.0	432.0	NaN
+
+MLDA without VR Sampler:
+Acceptance rate:     0.754
+Runtime:             10646.774906396866 seconds
+ESS list:            [465.43326031 541.13935601]
+Normalised ESS list: [0.46543326 0.54113936]
+ESS/sec:             [0.04371589 0.0508266 ]

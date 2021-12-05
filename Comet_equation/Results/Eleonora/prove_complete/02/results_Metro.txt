@@ -1,0 +1,18 @@
+# prova 02 results
+
+Metropolis Sampler:
+
+mu:     2
+theta:  3.141592653589793
+
+		mean	sd	hdi_3%	hdi_97%	mcse_mean	mcse_sd	ess_bulk	ess_tail	r_hat
+mu_random	2.092	0.227	1.686	2.514	0.024		0.018	96.0		123.0		NaN
+theta_random	3.266	0.461	2.343	4.103	0.031		0.022	217.0		248.0		NaN
+
+Metropolis Sampler:
+
+Acceptance rate:     0.2805
+Runtime:             2331.339076280594 seconds
+ESS list:            [ 96.34180303 217.01244313]
+Normalised ESS list: [0.0963418  0.21701244]
+ESS/sec:             [0.04132466 0.09308489]

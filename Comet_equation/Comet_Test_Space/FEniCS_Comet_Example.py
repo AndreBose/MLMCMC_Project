@@ -16,8 +16,8 @@ import pandas            as pd
 
 # Settings
 
-mu    = 1                 # diffusion parameter
-theta = 1                 # advection angle parameter
+mu    = 2                 # diffusion parameter
+theta = 3.14                 # advection angle parameter
 
 n_segments_h = 64        # number of segments on the horizontal axis
 n_segments_v = 64         # number of segments on the vertical   axis
@@ -48,7 +48,7 @@ bc = DirichletBC(V, u_D, boundary)
 u = TrialFunction(V)
 v = TestFunction (V)
 
-f = Expression('10*exp(-25*pow( pow(x[0]-x_00, 2) + pow(x[1]-x_01, 2), 0.5))', 
+f = Expression('10*exp(-50*pow( pow(x[0]-x_00, 2) + pow(x[1]-x_01, 2), 0.5))', 
                degree=2, x_00 = x_0[0], x_01 = x_0[1])
 
 b = Constant((np.cos(theta), np.sin(theta)))

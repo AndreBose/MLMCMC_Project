@@ -1,0 +1,28 @@
+Q_1 mean   = [4.         0.40055367]
+
+Q_0 mean   = [4.         0.40143451]
+Q_1_0 mean = [0.00000000e+00 5.50236374e-11]
+
+Standard method:    Mean: [4.         0.40055367]
+
+VR method:          Mean: [4.         0.40143451]
+
+Q_1 var   = [0.00000000e+00 6.53409589e-06]
+
+Q_0 var   = [0.00000000e+00 6.39633772e-06]
+Q_1_0_var = [0.00000000e+00 2.75000826e-22]
+
+Without VR ESS:   [9000.         1973.20553647]
+Without VR Standard Error:  [0.0000000e+00 3.3114117e-09]
+With VR ESS:      [45000.          3911.09691862] [9000.         2430.52857096]
+With VR Standard Errors:    [0.00000000e+00 1.63543319e-09]     [0.00000000e+00 1.13144453e-25]
+
+
+Metropolis Mean:            [4.         0.40061985]
+Metropolis  Var:            [0.00000000e+00 4.91632755e-06]
+Metropolis  ESS:            [9000.          187.23627313]
+Metropolis Standard Error:  [0.00000000e+00 2.62573457e-08]
+DEMetropolisZ Mean:            [4.         0.40067645]
+DEMetropolisZ  Var:            [0.00000000e+00 6.04073475e-06]
+DEMetropolisZ  ESS:            [9000.          742.41190386]
+DEMetropolisZ Standard Error:  [0.0000000e+00 8.1366351e-09]

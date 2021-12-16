@@ -1,0 +1,74 @@
+Metropolis Sampler:
+
+beta:     1.1
+gamma:    0.3
+mean	sd	hdi_3%	hdi_97%	mcse_mean	mcse_sd	ess_bulk	ess_tail	r_hat
+beta_random	1.096	0.004	1.090	1.106	0.001	0.0	50.0	94.0	1.13
+gamma_random	0.300	0.002	0.297	0.303	0.000	0.0	197.0	318.0	1.01
+
+Metropolis Sampler:
+
+Acceptance rate:     0.1297222222222222
+Runtime:             106.9360408782959 seconds
+ESS list:            [ 49.77590643 197.48498357]
+Normalised ESS list: [0.00553066 0.02194278]
+ESS/sec:             [0.46547362 1.84675795]
+
+
+
+
+DEMetropolisZ Sampler:
+
+beta:     1.1
+gamma:    0.3
+mean	sd	hdi_3%	hdi_97%	mcse_mean	mcse_sd	ess_bulk	ess_tail	r_hat
+beta_random	1.096	0.005	1.087	1.106	0.0	0.0	690.0	921.0	1.0
+gamma_random	0.300	0.002	0.296	0.303	0.0	0.0	639.0	795.0	1.0
+
+DEMetropolisZ Sampler:
+
+Acceptance rate:     0.6133333333333333
+Runtime:             54.1326470375061 seconds
+ESS list:            [690.35693118 638.60780717]
+Normalised ESS list: [0.07670633 0.07095642]
+ESS/sec:             [12.75306066 11.79709181]
+
+
+
+
+MLDA without VR Sampler:
+
+beta:     1.1
+gamma:    0.3
+mean	sd	hdi_3%	hdi_97%	mcse_mean	mcse_sd	ess_bulk	ess_tail	r_hat
+beta_random	1.096	0.005	1.085	1.105	0.0	0.0	1852.0	1389.0	1.0
+gamma_random	0.300	0.002	0.296	0.303	0.0	0.0	2752.0	3046.0	1.0
+
+MLDA without VR Sampler:
+
+Acceptance rate:     0.6992222222222222
+Runtime:             415.394492149353 seconds
+ESS list:            [1851.5680368 2751.7901942]
+Normalised ESS list: [0.20572978 0.30575447]
+ESS/sec:             [4.45737262 6.62452258]
+
+
+
+
+MLDA with VR Sampler:
+
+beta:     1.1
+gamma:    0.3
+mean	sd	hdi_3%	hdi_97%	mcse_mean	mcse_sd	ess_bulk	ess_tail	r_hat
+beta_random	1.096	0.005	1.087	1.106	0.0	0.0	1592.0	1770.0	1.0
+gamma_random	0.300	0.002	0.296	0.303	0.0	0.0	1905.0	1820.0	1.0
+
+MLDA with VR Sampler:
+
+Acceptance rate:     0.5858888888888889
+Runtime:             396.41142678260803 seconds
+ESS list:            [1591.84901524 1905.15333577]
+Normalised ESS list: [0.17687211 0.2116837 ]
+ESS/sec:             [4.01564866 4.80600005]
+
+

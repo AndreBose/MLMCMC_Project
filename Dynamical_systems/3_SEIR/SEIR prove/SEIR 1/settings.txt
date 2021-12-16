@@ -1,0 +1,77 @@
+ # Priors
+
+        beta_random  = pm.Lognormal(name = 'beta_random', mu=math.log(0.4) ,tau=0.5)
+        gamma_random = pm.Uniform(name = 'gamma_random', lower = lower_gamma, upper = upper_gamma)
+ 
+
+# True model 
+
+n_params    = 2             # number of unknown quantities
+noise_scale = 0.01          # scale of the gaussian noise on the data
+
+## Initial conditions
+
+initN = 1
+
+initI = 0.1
+initR = 0
+
+## True values for the parameters
+
+gamma_true = 0.3
+beta_true  = 1.1
+
+## Days and steps
+
+days = 50                            # total number of days
+
+time_step = 0.5                      # time_step true model, expressed in days (if artificial data is used)
+time_step_models = np.array([1,0.5]) # time_step for all the levels
+
+
+# Likelihood
+
+var_lik = np.array([0.01,0.01]) # value that determines the variance in the likelihood
+
+plot_likelihood = True          # plot likelihood at each level 
+n_ref_lik   = 50                # precision of the grid for the plot
+contour_lik = 20                # number of contour lines in each plot
+
+lower_gamma = 0.2               # lower bound for gamma
+upper_gamma = 0.7               # upper bound for gamma
+
+
+# MCMC Settings
+
+use_MAP_as_start = True   
+gamma_0 = 0.3              
+beta_0  = 0.5              
+
+
+tune_interval_M   = 20     
+tune_interval_DMZ = 100
+
+
+
+## MH
+
+ndraws_M     = 3000      
+nburn_M      = 2000       
+nchains_M    = 3        
+
+
+## DemetropolisZ
+
+
+ndraws_DMZ   = 3000      
+nburn_DMZ    = 2000     
+nchains_DMZ  = 3         
+
+
+## MLDA with/without VR
+
+
+ndraws_MLDA  = 3000    
+nburn_MLDA   = 2000     
+nchains_MLDA = 3       
+nsub_MLDA    = 5          

@@ -1,0 +1,72 @@
+Metropolis Sampler:
+
+beta:     1.1
+gamma:    0.3
+mean	sd	hdi_3%	hdi_97%	mcse_mean	mcse_sd	ess_bulk	ess_tail	r_hat
+beta_random	1.096	0.004	1.088	1.104	0.0	0.0	118.0	89.0	1.15
+gamma_random	0.300	0.002	0.296	0.303	0.0	0.0	330.0	450.0	1.01
+
+Metropolis Sampler:
+
+Acceptance rate:     0.12466666666666666
+Runtime:             109.49662208557129 seconds
+ESS list:            [118.14860442 329.54394041]
+Normalised ESS list: [0.01312762 0.03661599]
+ESS/sec:             [1.07901597 3.00962654]
+
+
+
+
+DEMetropolisZ Sampler:
+
+beta:     1.1
+gamma:    0.3
+mean	sd	hdi_3%	hdi_97%	mcse_mean	mcse_sd	ess_bulk	ess_tail	r_hat
+beta_random	1.096	0.005	1.086	1.105	0.0	0.0	1121.0	1381.0	1.0
+gamma_random	0.300	0.002	0.296	0.303	0.0	0.0	1224.0	1485.0	1.0
+
+DEMetropolisZ Sampler:
+
+Acceptance rate:     0.32255555555555554
+Runtime:             55.8561429977417 seconds
+ESS list:            [1120.91357299 1224.28372438]
+Normalised ESS list: [0.12454595 0.13603152]
+ESS/sec:             [20.06786564 21.91851529]
+
+
+
+
+MLDA without VR Sampler:
+
+beta:     1.1
+gamma:    0.3
+mean	sd	hdi_3%	hdi_97%	mcse_mean	mcse_sd	ess_bulk	ess_tail	r_hat
+beta_random	1.096	0.005	1.087	1.106	0.0	0.0	2155.0	1797.0	1.0
+gamma_random	0.300	0.002	0.296	0.303	0.0	0.0	2938.0	2727.0	1.0
+
+MLDA without VR Sampler:
+
+Acceptance rate:     0.6151111111111112
+Runtime:             415.19601607322693 seconds
+ESS list:            [2155.29898206 2937.89376605]
+Normalised ESS list: [0.23947766 0.32643264]
+ESS/sec:             [5.19103965 7.07591993]
+
+
+
+
+MLDA with VR Sampler:
+
+beta:     1.1
+gamma:    0.3
+mean	sd	hdi_3%	hdi_97%	mcse_mean	mcse_sd	ess_bulk	ess_tail	r_hat
+beta_random	1.096	0.005	1.087	1.106	0.0	0.0	1675.0	1872.0	1.0
+gamma_random	0.300	0.002	0.296	0.303	0.0	0.0	1944.0	2176.0	1.0
+
+MLDA with VR Sampler:
+
+Acceptance rate:     0.5146666666666667
+Runtime:             392.27514004707336 seconds
+ESS list:            [1674.59607123 1943.82391534]
+Normalised ESS list: [0.18606623 0.21598044]
+ESS/sec:             [4.26893244 4.95525644]

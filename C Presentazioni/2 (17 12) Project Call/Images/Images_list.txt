@@ -14,9 +14,9 @@ img04: Likelihood coarse
 
 img05: Likelihood fine
 
-img06: Prior uniform
+img06: Prior uniform -> Outputs MLDA noVR
 
-img07: Prior gamma(10,5)
+img07: Prior gamma(10,5) -> Outputs MLDA noVR
 
 img08: Coarse onerosa
 

@@ -8,17 +8,17 @@ img01: Comet Equation Definition
 
 img02: Comet Equation Solution (mu = 2, theta = pi)
 
-img03: 
+img03: Campionamento dati
 
-img04: 
+img04: Likelihood coarse
 
-img05: 
+img05: Likelihood fine
 
-img06: 
+img06: Prior uniform
 
-img07: 
+img07: Prior gamma(10,5)
 
-img08: 
+img08: Coarse onerosa
 
 img09: SIR  Model Equations
 

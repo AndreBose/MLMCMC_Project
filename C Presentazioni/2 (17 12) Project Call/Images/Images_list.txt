@@ -1,0 +1,29 @@
+###################################
+#                                 #
+# Project Call 17 December Images #
+#                                 #
+###################################
+
+img01: Comet Equation Definition
+
+img02: Comet Equation Solution (mu = 2, theta = pi)
+
+img03: 
+
+img04: 
+
+img05: 
+
+img06: 
+
+img07: 
+
+img08: 
+
+img09: SIR  Model Equations
+
+img10: SEIR Model Equations
+
+img11: SEIR Data and Solutions (beta = 1.1, sigma = 0.2, gamma = 0.3, E0 = 0.1, I0 = 0.1, h0 = 2, h1 = 0.5)
+
+img12: SIR-SEIR Solutions      (beta = 0.7, sigma = 0.2, gamma = 0.2, E0 = 0,   I0 = 0.1)

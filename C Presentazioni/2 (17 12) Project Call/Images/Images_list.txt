@@ -20,10 +20,12 @@ img07: Prior gamma(10,5) -> Outputs MLDA noVR
 
 img08: Coarse onerosa
 
-img09: SIR  Model Equations
+img09: 
 
-img10: SEIR Model Equations
+img10: SIR  Model Equations
 
-img11: SEIR Data and Solutions (beta = 1.1, sigma = 0.2, gamma = 0.3, E0 = 0.1, I0 = 0.1, h0 = 2, h1 = 0.5)
+img11: SEIR Model Equations
 
-img12: SIR-SEIR Solutions      (beta = 0.7, sigma = 0.2, gamma = 0.2, E0 = 0,   I0 = 0.1)
+img12: SEIR Data and Solutions (beta = 1.1, sigma = 0.2, gamma = 0.3, E0 = 0.1, I0 = 0.1, h0 = 2, h1 = 0.5)
+
+img13: SIR-SEIR Solutions      (beta = 0.7, sigma = 0.2, gamma = 0.2, E0 = 0,   I0 = 0.1)

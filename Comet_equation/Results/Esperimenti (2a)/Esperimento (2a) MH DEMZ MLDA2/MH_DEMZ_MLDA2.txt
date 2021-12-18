@@ -1,0 +1,87 @@
+# System
+stochastic  = False         # random seeds for the experiments
+
+RANDOM_SEED = 123446        # sampling seed
+NUMPY_SEED  = 123           # Numpy    seed
+
+
+# True model
+mu_true    = 2              # diffusion parameter
+theta_true = np.pi          # advection angle parameter
+
+n_params   = 2              # number of unknown quantities
+
+x_0   = np.array([0.5,0.5]) # center of the bump source-force
+
+forcing = '10*exp(-50*pow( pow(x[0]-x_00, 2) + pow(x[1]-x_01, 2), 0.5))' # forcing term in the PDE
+
+noise_scale = 0.0001       # noise scale in the output data
+
+
+# PDE solver
+poly_degree = 2                      # polynomial degree for the FEniCS solver
+
+n_data_hv_true   = 256               # number of segments on both vertical and horizontal axis, for the true model
+n_data_hv_levels = np.array([16,32]) # number of segments on both vertical and horizontal axis, for each level of approximation
+
+
+# Priors for unknown parameters
+lower_mu    = 0.1       # lower bound for mu    (supposing mu ~ Uniform)
+upper_mu    = 5         # upper bound for mu
+lower_theta = 0         # lower bound for theta (supposing theta ~ Uniform)
+upper_theta = 2*np.pi   # upper bound for theta
+
+
+# starting point 
+use_MAP_as_start = False  # set true to use MAP as starting point, else uses [mu_0, theta_0] (sembra dare problemi MAP)
+mu_0        = 3.5         # initial guess for mu unknown parameter
+theta_0     = 2           # initial guess for theta unknown parameter
+
+
+# rescaling factors for the reduced model
+path_to_tables = os.path.join(os.getcwd(), 'reduced_order_model/generate_tables')
+data_all = pd.read_csv (os.path.join(path_to_tables, 'solutions.csv'), names = ('x','y','mu','theta','u'))
+u_max = np.max(data_all['u']) 
+u_min = np.min(data_all['u']) 
+
+
+# Likelihood
+sigma = np.array([0.00075, 0.00050])  # value that determines the variance in the likelihood (first: coarse; last: fine)
+
+plot_likelihood = True  # plot likelihood at each level 
+n_ref_lik   = 30        # precision of the grid for the plot
+contour_lik = 10        # number of contour lines in each plot
+
+
+# MCMC: Metropolis
+perform_M    = True    # perform the Metropolis sampling
+
+ndraws_M     = 3000    # number of draws from the distribution for M
+nburn_M      = 1000    # number of burn-in samples for M
+nchains_M    = 1       # number of chains for M
+
+
+# MCMC: DEMetropolisZ
+perform_DMZ    = True    # perform the DEMetropolisZ sampling
+
+ndraws_DMZ     = 3000    # number of draws from the distribution for M
+nburn_DMZ      = 1000    # number of burn-in samples for M
+nchains_DMZ    = 1       # number of chains for M
+
+
+# MCMC: Metropolis MLDA
+perform_MLDA_without_variance_reduction = True    # perform the MLDA sampling without variance reduction
+perform_MLDA_with_variance_reduction    = False   # perform the MLDA sampling with variance reduction
+
+ndraws_MLDA  = 3000     # number of draws from the distribution for MLDA
+nburn_MLDA   = 1000     # number of burn-in samples for MLDA
+nchains_MLDA = 1        # number of chains for MLDA
+nsub_MLDA    = 2        # subsampling rate for MLDA
+
+
+# tuning 
+tune           = True
+tune_interval_M  = 100    # for Metropolis (set high to prevent tuning)
+tune_interval_DMZ = 100   # for DEMetropolisZ (set high to prevent tuning)
+tune_interval_MLDA = 100  # for MLDA (set high to prevent tuning)
+discard_tuning = True

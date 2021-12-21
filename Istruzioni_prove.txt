@@ -10,7 +10,7 @@ baseline: - prior Unif(0.1, 5) Unif(0, 2pi)
           - 1000 + 3000
           - noise level 0.0001
           - tune_interval = 100
- sigma diversi: (0.00050, 0.00050) | (0.00075, 0.00050) | (0.001, 0.00050))
+ sigma diversi: (0.00050, 0.00050) | (0.00075, 0.00050) | (0.001, 0.00050)) --> FATTO
 
 
 2) Comet Surrogate -> FEM
@@ -19,16 +19,15 @@ baseline: - prior Unif(0.1, 5) Unif(0, 2pi)
           - (mu_0, theta_0) = (3.5, 2)
           - uniform 3x3
           - sigma = (0.00075, 0.00050)
-          - nsubs = (da scegliere, probabilmente 5)
+          - nsubs = 20
           - forzante = 50
           - coarse: 16 | fine: 32
           - 1000 + 3000
           - noise level 0.0001
           - tune_interval = 100
- a) nsubs diversi: 2 | 5 | 10
- b) sigma diversi: (0.00050, 0.00050) | (0.00075, 0.00050) | (0.001, 0.00050))
- c) griglie diverse: Nord-Est | rombo | uniform 3x3 (eventualmente diversi)
- d) prior: Uniform(0.1, 5) | Gamma(2,1) | Gamma(10, 5)
+ a) nsubs diversi: 2 | 5 | 10 | 20  --> FATTO
+ b) griglie diverse: Nord-Est | rombo | uniform 3x3 (eventualmente diversi)
+ c) prior: Uniform(0.1, 5) | Gamma(2,1) | Gamma(10, 5)
 
 
 3) ODE SEIR -> SEIR
@@ -43,18 +42,14 @@ baseline: - parametri sistema ode da decidere sulla base di articoli: sigma_true
 	  - initI=0.1 | initE=0.1 | initR=0 | initN=1
 	  - true 
 	  - days=100
+	  - time_step = 0.2                      # time_step true model, expressed in days (if artificial data is used)
+	  - time_step_models = np.array([0.4,0.2]) # time_step for all the levels
 	  - MCMC settings: sigma0=0.4 | gamma0=0.3 | beta0=0.5 | variance0=0.01
 	  - tune_interval_M   = 20        # set high to prevent tuning
 	  - tune_interval_DMZ = 100
-	  - ndraws_M     = 8000     
-	  - nburn_M      = 2000     
-	  - nchains_M    = 3        
-	  - ndraws_DMZ   = 8000     
-	  - nburn_DMZ    = 2000     
-	  - nchains_DMZ  = 3        
-	  - ndraws_MLDA  = 8000     
-	  - nburn_MLDA   = 2000     
-	  - nchains_MLDA = 3        
+	  - ndraws     = 8000     
+	  - nburn      = 2000     
+	  - nchains    = 3               
 	  - nsub_MLDA    = 5
 	  - prior: beta = Uniform   (name = 'beta_random',           lower = lower_beta,  upper = upper_beta )
         	   sigma = Uniform   (name = 'sigma_random',          lower = lower_sigma, upper = upper_sigma)
@@ -63,9 +58,9 @@ baseline: - parametri sistema ode da decidere sulla base di articoli: sigma_true
 
 Metropolis vs DEMetropolisZ vs MLDA_no_VR vs MLDA_VR
  a) nsubs:
- b) griglie (delta_T) coarse: 2T | 5T | 10T | 20T, fine: T=0.1
+ b) griglie (delta_T) coarse: 2T | 5T | 10T | 20T, fine: T=0.2
  c) prior: 2 articolo + 2 ragionati sulle probabilità
- d) range funzionamento parametri sistema ode
+ d) range funzionamento parametri sistema ode (post punto 4)
 
 
 4) ODE SIR -> SEIR

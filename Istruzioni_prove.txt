@@ -10,7 +10,7 @@ baseline: - prior Unif(0.1, 5) Unif(0, 2pi)
           - 1000 + 3000
           - noise level 0.0001
           - tune_interval = 100
- sigma diversi: (0.00050, 0.00050) | (0.00075, 0.00050) | (0.001, 0.00050)) --> FATTO
+a) sigma diversi: (0.00050, 0.00050) | (0.00075, 0.00050) | (0.001, 0.00050)) --> FATTO
 
 
 2) Comet Surrogate -> FEM
@@ -60,7 +60,7 @@ baseline: - parametri sistema ode da decidere sulla base di articoli: sigma_true
         	   noise_variance = HalfCauchy(name = 'noise_variance_random', beta  = 1)        
 
 Metropolis vs DEMetropolisZ vs MLDA_no_VR vs MLDA_VR
- a) nsubs:
+ a) nsubs: 2 | 5 | 10 | 20 
  b) griglie (delta_T) coarse: 2T | 5T | 10T | 20T, fine: T=0.2
  c) prior: 2 articolo + 2 ragionati sulle probabilità
  d) range funzionamento parametri sistema ode (post punto 4)

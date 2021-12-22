@@ -1,2 +1,4 @@
 Metropolis fa il primo 20% di samples in soli 3 min 30 sec,
 il tempo totale che impiegherebbe sarebbe maggiore
+
+Avevo sbagliato MLDA, avevo lasciato subs=5, il plot ESS_comparison è sbagliato

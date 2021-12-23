@@ -1,0 +1,90 @@
+Metropolis Sampler:
+
+beta:            0.27
+sigma:           0.2
+gamma:           0.1
+noise variance:  0.01
+mean	sd	hdi_3%	hdi_97%	mcse_mean	mcse_sd	ess_bulk	ess_tail	r_hat
+beta_random	0.277	0.007	0.265	0.292	0.001	0.0	166.0	335.0	1.02
+sigma_random	0.201	0.010	0.184	0.222	0.001	0.0	251.0	590.0	1.01
+gamma_random	0.098	0.003	0.093	0.103	0.000	0.0	319.0	535.0	1.01
+noise_variance_random	0.010	0.000	0.009	0.010	0.000	0.0	988.0	874.0	1.01
+
+Metropolis Sampler:
+
+Acceptance rate:     0.10869791666666667
+Runtime:             490.16225242614746 seconds
+ESS list:            [166.27359959 251.3452339  318.79453085 988.41759827]
+Normalised ESS list: [0.00692807 0.01047272 0.01328311 0.04118407]
+ESS/sec:             [0.33922155 0.51277966 0.65038572 2.01651105]
+
+
+
+
+DEMetropolisZ Sampler:
+
+beta:            0.27
+sigma:           0.2
+gamma:           0.1
+noise variance:  0.01
+mean	sd	hdi_3%	hdi_97%	mcse_mean	mcse_sd	ess_bulk	ess_tail	r_hat
+beta_random	0.277	0.008	0.262	0.292	0.0	0.0	2035.0	2597.0	1.0
+sigma_random	0.201	0.011	0.179	0.221	0.0	0.0	1926.0	2535.0	1.0
+gamma_random	0.098	0.003	0.093	0.104	0.0	0.0	2024.0	2837.0	1.0
+noise_variance_random	0.010	0.000	0.009	0.010	0.0	0.0	1868.0	2889.0	1.0
+
+DEMetropolisZ Sampler:
+
+Acceptance rate:     0.265625
+Runtime:             122.21349263191223 seconds
+ESS list:            [2034.95728149 1925.63271936 2023.72798269 1868.20801806]
+Normalised ESS list: [0.08478989 0.0802347  0.084322   0.077842  ]
+ESS/sec:             [16.65083975 15.75630217 16.55895711 15.28643015]
+
+
+
+
+MLDA no VR Sampler:
+
+beta:            0.27
+sigma:           0.2
+gamma:           0.1
+noise variance:  0.01
+mean	sd	hdi_3%	hdi_97%	mcse_mean	mcse_sd	ess_bulk	ess_tail	r_hat
+beta_random	0.277	0.008	0.262	0.292	0.0	0.0	8672.0	12330.0	1.0
+sigma_random	0.201	0.011	0.180	0.222	0.0	0.0	8546.0	12184.0	1.0
+gamma_random	0.098	0.003	0.093	0.104	0.0	0.0	8231.0	11765.0	1.0
+noise_variance_random	0.010	0.000	0.009	0.010	0.0	0.0	8117.0	11961.0	1.0
+
+MLDA no VR Sampler:
+
+Acceptance rate:     0.8430833333333333
+Runtime:             942.549679517746 seconds
+ESS list:            [8671.63782362 8546.03343432 8231.27784108 8116.99095263]
+Normalised ESS list: [0.36131824 0.35608473 0.34296991 0.33820796]
+ESS/sec:             [9.20019179 9.06693156 8.73299097 8.61173806]
+
+
+
+
+MLDA with VR Sampler:
+
+beta:            0.27
+sigma:           0.2
+gamma:           0.1
+noise variance:  0.01
+mean	sd	hdi_3%	hdi_97%	mcse_mean	mcse_sd	ess_bulk	ess_tail	r_hat
+beta_random	0.277	0.008	0.262	0.292	0.0	0.0	4943.0	7456.0	1.0
+sigma_random	0.201	0.011	0.181	0.223	0.0	0.0	5075.0	6625.0	1.0
+gamma_random	0.098	0.003	0.093	0.104	0.0	0.0	4628.0	6812.0	1.0
+noise_variance_random	0.010	0.000	0.009	0.010	0.0	0.0	4923.0	7695.0	1.0
+
+MLDA with VR Sampler:
+
+Acceptance rate:     0.62675
+Runtime:             879.7922921180725 seconds
+ESS list:            [4943.00399089 5074.98339526 4627.54360678 4923.26655517]
+Normalised ESS list: [0.2059585  0.21145764 0.19281432 0.20513611]
+ESS/sec:             [5.6183761  5.76838811 5.25981376 5.59594191]
+
+

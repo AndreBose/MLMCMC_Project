@@ -1,0 +1,27 @@
+#settings
+	  - lower_sigma = 0.05              # lower bound for sigma
+	  - upper_sigma = 0.5               # upper bound for sigma
+	  - lower_gamma = 0.05               # lower bound for gamma
+	  - upper_gamma = 0.4               # upper bound for gamma
+	  - lower_beta  = 0.05               # lower bound for beta
+	  - upper_beta  = 0.8           
+	  - varianza incognita
+          - use_MAP_as_start = True
+	  - initI=0.1 | initE=0.1 | initR=0 | initN=1
+	  - true 
+	  - days=100
+	  - time_step = 0.2                                       # time_step true model, expressed in days (if artificial data is used)
+	  - K = 2                                                 # time_step ratio coarse/fine
+	  - time_step_models = np.array([K*time_step, time_step]) # time_step for all the levels
+	  - MCMC settings: sigma0=0.4 | gamma0=0.3 | beta0=0.5 | variance0=0.01
+	  - tune_interval_M   = 100        # set high to prevent tuning
+	  - tune_interval_DMZ = 100
+          - tune_interval_MLDA = 100
+	  - ndraws     = 8000     
+	  - nburn      = 2000     
+	  - nchains    = 3               
+	  - nsub_MLDA    = 5
+	  - prior: beta = Lognormal  (name = 'beta_random', mu=-1.27,sigma=0.27 )
+        	   sigma = Lognormal  (name = 'sigma_random',mu=-1.57,sigma=0.27)
+        	   gamma = Weibull   (name = 'gamma_random', alpha=2,beta=0.15)
+        	   noise_variance = HalfCauchy(name = 'noise_variance_random', beta  = 1)        

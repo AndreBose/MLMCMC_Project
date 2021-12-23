@@ -1,0 +1,14 @@
+Le prove si basano nel cambiare E0 ed eventualmente I0.
+
+I settings sono gli stessi della prova b)
+
+prova a): E0=0.1, I0=0.1 (equivalente alla prova b)
+prova b): E0=0.15 I0=0.1
+prova c): E0=0.25 I0=0.1
+prova d): E0=0.1  I0=0.15
+prova e): E0=0.1  I0=0.25
+prova f): E0=0.40 I0=0.1
+prova g): E0=0.1  I0=0.40
+
+(Secondo me le condizioni iniziali non posso variare a caso: ci sono delle configurazioni che sono più 
+sensate rispetto ad altre, dati i parametri).

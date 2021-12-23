@@ -1,0 +1,13 @@
+###################################################################################
+Le prove si basano sul variare sigma del SEIR, a parità di altri parametri (comuni
+a tutti i notebook)
+
+Prova a) sigma_true = 0.2
+Prova b) sigma_true = 0.1
+Prova c) sigma_true = 0.05 (days=200)
+Prova d) sigma_true = 0.03 (days=250)
+Prove e) sigma_true = 0.35
+Prova f) sigma_true = 0.5
+
+Per sigma piccolo tutto peggiora, per sigma grande la varianza della likelihood diventa gigantesca.
+=> Tradeoff: sigma deve essere il più possibile vicino a gamma

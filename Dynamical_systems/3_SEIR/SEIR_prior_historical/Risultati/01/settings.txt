@@ -1,4 +1,7 @@
-dati_storici: beta = 125% * 0.27 (25% rate più alto)
+dati_storici: beta = 125% * 0.27 (25% infection rate più alto)
 
 dati_nuovi: days = 100
-            days_avail = 10
+            days_avail_01 = 10
+            days_avail_02 = 20
+            days_avail_03 = 50
+            days_avail_04 = 100

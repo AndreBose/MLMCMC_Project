@@ -1,0 +1,7 @@
+https://docs.pymc.io/en/v3/pymc-examples/examples/samplers/DEMetropolisZ_EfficiencyComparison.html
+
+https://docs.pymc.io/en/v3/pymc-examples/examples/samplers/DEMetropolisZ_tune_drop_fraction.html
+
+https://link.springer.com/content/pdf/10.1007/s11222-008-9104-9.pdf
+
+https://en.wikipedia.org/wiki/Differential_evolution

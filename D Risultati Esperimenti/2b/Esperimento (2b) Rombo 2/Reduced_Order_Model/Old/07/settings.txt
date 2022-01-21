@@ -1,0 +1,10 @@
+n_epoch = 70, 70
+
+optimizer = Adam, lr=1e-3
+optimizer = SGD,  lr=0.01, momentum=0.9, nesterov=True
+
+model: dense(50) -> dense(50) -> dense(50)
+
+batch_size = 64, 64
+
+training_time = 922.716 + 766.372 seconds

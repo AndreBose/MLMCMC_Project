@@ -1,7 +1,0 @@
-dati_storici: beta = 75% * 0.27 (25% infection rate più basso)
-
-dati_nuovi: days = 100
-            days_avail_01 = 10
-            days_avail_02 = 20
-            days_avail_03 = 50
-            days_avail_04 = 100
